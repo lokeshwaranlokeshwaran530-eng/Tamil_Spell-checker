@@ -1,0 +1,395 @@
+.panel {
+  background: var(--bg-surface-1);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 420px;
+}
+
+.tamilFont {
+  font-family: var(--font-tamil) !important;
+}
+
+
+/* ── Panel Header ── */
+.panelHeader {
+  padding: var(--space-3) var(--space-5);
+  border-bottom: 1px solid var(--gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-surface-2);
+  min-height: 48px;
+  flex-shrink: 0;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.headerIcon {
+  width: 28px;
+  height: 28px;
+  background: var(--brand-50);
+  border: 1px solid var(--brand-200);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-600);
+  flex-shrink: 0;
+}
+
+.panelTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid;
+  animation: bounce-in 350ms var(--ease-out) both;
+}
+
+.badgeError {
+  background: var(--error-50);
+  color: var(--error-600);
+  border-color: var(--error-border);
+}
+
+.badgeOk {
+  background: var(--success-50);
+  color: var(--success-600);
+  border-color: var(--success-border);
+}
+
+/* ── Content Area ── */
+.content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* ── Empty State ── */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-10) var(--space-6);
+  gap: var(--space-4);
+}
+
+.emptyIllustration {
+  margin-bottom: var(--space-1);
+}
+
+.emptyTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 4px;
+}
+
+.emptyDesc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--gray-500);
+  max-width: 280px;
+}
+
+.kbdInline {
+  display: inline-block;
+  font-size: 11px;
+  font-family: var(--font-sans);
+  background: var(--gray-100);
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  padding: 1px 6px;
+  color: var(--gray-700);
+}
+
+.emptyHints {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.emptyHint {
+  font-size: 12px;
+  color: var(--brand-700);
+  background: var(--brand-50);
+  border: 1px solid var(--brand-200);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-weight: 500;
+}
+
+/* ── Loading State ── */
+.loadingState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-8) var(--space-6);
+  gap: var(--space-5);
+}
+
+.loadingSpinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--gray-200);
+  border-top-color: var(--brand-500);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+.loadingText {
+  text-align: center;
+}
+
+.loadingTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.loadingSubtitle {
+  font-size: 13px;
+  color: var(--gray-400);
+  margin-top: 2px;
+}
+
+/* Skeleton shimmer */
+.skeletonList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.skeletonCard {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  animation: pulse-ring 1.6s ease-in-out infinite;
+}
+
+.skeletonRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.skeletonChip {
+  height: 24px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(90deg, var(--gray-200) 25%, var(--gray-100) 50%, var(--gray-200) 75%);
+  background-size: 400px 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+}
+
+.skeletonArrow {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gray-200);
+  flex-shrink: 0;
+}
+
+.skeletonLine {
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(90deg, var(--gray-200) 25%, var(--gray-100) 50%, var(--gray-200) 75%);
+  background-size: 400px 100%;
+  animation: shimmer 1.8s ease-in-out 200ms infinite;
+}
+
+/* ── Success / Clean State ── */
+.successState {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.cleanBox {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  background: var(--success-50);
+  border: 1px solid var(--success-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+}
+
+.cleanIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--success-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(34,197,94,0.35);
+}
+
+.cleanTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--success-600);
+}
+
+.cleanSubtitle {
+  font-size: 13px;
+  color: var(--gray-600);
+  margin-top: 2px;
+}
+
+/* ── Errors State ── */
+.errorsState {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/* ── Corrected Box (shared) ── */
+.correctedBox {
+  background: var(--brand-50);
+  border: 1px solid var(--brand-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.correctedHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--brand-200);
+  background: rgba(255,255,255,0.5);
+}
+
+.sectionLabel {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--brand-700);
+}
+
+.correctedText {
+  font-family: var(--font-tamil);
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--gray-800);
+  padding: var(--space-4);
+}
+
+/* ── Copy Button ── */
+.copyBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  padding: 4px 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--brand-300);
+  background: var(--bg-surface-1);
+  color: var(--brand-700);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.copyBtn:hover { background: var(--brand-100); }
+
+.copyBtnDone {
+  background: var(--success-50) !important;
+  border-color: var(--success-border) !important;
+  color: var(--success-600) !important;
+}
+
+/* ── Anomaly Section ── */
+.anomalySection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.anomalyHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.countBadge {
+  font-size: 11px;
+  font-weight: 700;
+  background: var(--error-50);
+  color: var(--error-600);
+  border: 1px solid var(--error-border);
+  border-radius: var(--radius-full);
+  padding: 2px 8px;
+  min-width: 22px;
+  text-align: center;
+}
+
+.anomalyList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* ── Fault State ── */
+.faultBox {
+  margin: var(--space-5);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  background: var(--error-50);
+  border: 1px solid var(--error-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+}
+
+.faultIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--error-500);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.faultTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--error-600);
+}
+
+.faultDesc {
+  font-size: 13px;
+  color: var(--gray-600);
+  margin-top: 3px;
+  line-height: 1.5;
+}

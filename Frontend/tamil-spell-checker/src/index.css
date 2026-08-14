@@ -1,0 +1,193 @@
+/* ═══════════════════════════════════════════════════════════════
+   TAMIL SPELL CHECKER — Global Design System
+   Professional Light Theme
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── Design Tokens ─── */
+:root {
+  /* Surface Hierarchy */
+  --bg-canvas:        #F0F4F8;
+  --bg-surface-1:     #FFFFFF;
+  --bg-surface-2:     #F8FAFC;
+  --bg-surface-3:     #EFF6FF;
+
+  /* Brand Palette — Deep Teal/Emerald */
+  --brand-50:         #ECFDF5;
+  --brand-100:        #D1FAE5;
+  --brand-200:        #A7F3D0;
+  --brand-400:        #34D399;
+  --brand-500:        #10B981;
+  --brand-600:        #059669;
+  --brand-700:        #047857;
+  --brand-800:        #065F46;
+  --brand-900:        #064E3B;
+
+  /* Accent — Violet for contrast */
+  --accent-50:        #F5F3FF;
+  --accent-100:       #EDE9FE;
+  --accent-500:       #8B5CF6;
+  --accent-600:       #7C3AED;
+
+  /* Semantic Colors */
+  --error-50:         #FFF1F2;
+  --error-100:        #FFE4E6;
+  --error-400:        #FB7185;
+  --error-500:        #F43F5E;
+  --error-600:        #E11D48;
+  --error-border:     #FECDD3;
+
+  --warn-50:          #FFFBEB;
+  --warn-400:         #FBBF24;
+  --warn-500:         #F59E0B;
+  --warn-border:      #FDE68A;
+
+  --success-50:       #F0FDF4;
+  --success-100:      #DCFCE7;
+  --success-500:      #22C55E;
+  --success-600:      #16A34A;
+  --success-border:   #BBF7D0;
+
+  /* Neutral Scale */
+  --gray-50:          #F9FAFB;
+  --gray-100:         #F3F4F6;
+  --gray-200:         #E5E7EB;
+  --gray-300:         #D1D5DB;
+  --gray-400:         #9CA3AF;
+  --gray-500:         #6B7280;
+  --gray-600:         #4B5563;
+  --gray-700:         #374151;
+  --gray-800:         #1F2937;
+  --gray-900:         #111827;
+
+  /* Typography */
+  --font-sans:        'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-tamil:       'Noto Sans Tamil', 'Inter', sans-serif;
+
+  /* Elevation Shadows */
+  --shadow-xs:        0 1px 2px rgba(0,0,0,0.04);
+  --shadow-sm:        0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md:        0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
+  --shadow-lg:        0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -4px rgba(0,0,0,0.05);
+  --shadow-xl:        0 20px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.04);
+  --shadow-brand:     0 4px 14px rgba(5, 150, 105, 0.20);
+  --shadow-brand-lg:  0 8px 24px rgba(5, 150, 105, 0.25);
+
+  /* Border Radius */
+  --radius-sm:        6px;
+  --radius-md:        10px;
+  --radius-lg:        14px;
+  --radius-xl:        18px;
+  --radius-2xl:       24px;
+  --radius-full:      9999px;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Transitions */
+  --ease-out:   cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-inout: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast:   120ms;
+  --duration-normal: 200ms;
+  --duration-slow:   350ms;
+}
+
+/* ─── Reset & Base ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-canvas);
+  color: var(--gray-900);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+}
+
+/* ─── Scrollbar Styling ─── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: var(--radius-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--gray-400); }
+
+/* ─── Global Focus Ring ─── */
+:focus-visible {
+  outline: 2px solid var(--brand-500);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* ─── Animations ─── */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+@keyframes pulse-ring {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+
+@keyframes bounce-in {
+  0%   { opacity: 0; transform: scale(0.85); }
+  60%  { opacity: 1; transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+@keyframes slide-right {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Utility Classes ─── */
+.animate-fadeSlideUp   { animation: fadeSlideUp var(--duration-slow) var(--ease-out) both; }
+.animate-fadeIn        { animation: fadeIn var(--duration-normal) var(--ease-out) both; }
+.animate-bounceIn      { animation: bounce-in 400ms var(--ease-out) both; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}

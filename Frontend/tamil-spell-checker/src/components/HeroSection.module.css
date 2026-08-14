@@ -1,0 +1,88 @@
+.hero {
+  text-align: center;
+  padding: var(--space-10) var(--space-4) var(--space-6);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--brand-600);
+  background: var(--brand-50);
+  border: 1px solid var(--brand-200);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-5);
+}
+
+.eyebrowIcon {
+  font-size: 8px;
+  color: var(--brand-400);
+}
+
+.heading {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.15;
+  color: var(--gray-900);
+  margin-bottom: var(--space-4);
+}
+
+.headingAccent {
+  background: linear-gradient(135deg, var(--brand-600) 0%, var(--brand-500) 50%, var(--accent-500) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subheading {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--gray-500);
+  max-width: 520px;
+  margin: 0 auto var(--space-6);
+}
+
+.featurePills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.pill {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
+  background: var(--bg-surface-1);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-full);
+  color: var(--gray-600);
+  box-shadow: var(--shadow-xs);
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.pill:hover {
+  border-color: var(--brand-300);
+  color: var(--brand-700);
+  background: var(--brand-50);
+}
+
+.tamilFont {
+  font-family: var(--font-tamil) !important;
+}
+
+.heading,
+.subheading,
+.pill,
+.eyebrow {
+  transition: all 0.35s var(--ease-out);
+}

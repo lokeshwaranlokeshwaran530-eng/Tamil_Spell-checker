@@ -1,0 +1,156 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: 68px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 0 var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s var(--ease-out);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--brand-600), var(--brand-800));
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: var(--font-tamil);
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: var(--shadow-brand);
+  flex-shrink: 0;
+}
+
+.brandMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.brandName {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--gray-900);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  transition: all 0.3s var(--ease-out);
+}
+
+.brandSub {
+  font-size: 11px;
+  color: var(--gray-500);
+  letter-spacing: 0.01em;
+  transition: all 0.3s var(--ease-out);
+}
+
+.tamilFont {
+  font-family: var(--font-tamil) !important;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.statusChip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: var(--brand-50);
+  border: 1px solid var(--brand-200);
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--brand-700);
+  transition: all 0.3s var(--ease-out);
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--brand-500);
+  animation: pulse-ring 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+/* ── Language Toggle Button ── */
+.langToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--gray-300);
+  background: var(--bg-surface-1);
+  color: var(--gray-700);
+  transition: all var(--duration-normal) var(--ease-out);
+  white-space: nowrap;
+  box-shadow: var(--shadow-xs);
+}
+
+.langToggle:hover {
+  border-color: var(--brand-400);
+  color: var(--brand-700);
+  background: var(--brand-50);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.langToggle:active {
+  transform: translateY(0);
+}
+
+.langIcon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.langLabel {
+  line-height: 1;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 14px;
+  background: linear-gradient(135deg, var(--accent-50), var(--accent-100));
+  color: var(--accent-600);
+  border: 1px solid #DDD6FE;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.01em;
+  transition: all 0.3s var(--ease-out);
+}
+
+@media (max-width: 768px) {
+  .statusChip { display: none; }
+  .badge { display: none; }
+  .header { padding: 0 var(--space-4); }
+}
+
+@media (max-width: 480px) {
+  .langLabel { display: none; }
+  .langToggle { padding: 6px 10px; }
+}

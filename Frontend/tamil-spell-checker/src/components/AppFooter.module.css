@@ -1,0 +1,29 @@
+.tamilFont {
+  font-family: var(--font-tamil) !important;
+}
+
+.footer {
+  border-top: 1px solid var(--gray-200);
+  background: var(--bg-surface-1);
+  padding: var(--space-4) var(--space-6);
+  text-align: center;
+}
+
+.text {
+  font-size: 13px;
+  color: var(--gray-400);
+  font-family: var(--font-tamil);
+  line-height: 1.5;
+}
+
+.link {
+  color: var(--brand-600);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--duration-fast);
+}
+
+.link:hover {
+  color: var(--brand-800);
+  text-decoration: underline;
+}

@@ -1,0 +1,94 @@
+.tamilFont {
+  font-family: var(--font-tamil) !important;
+}
+
+.card {
+  background: var(--bg-surface-1);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  animation: slide-right var(--duration-slow) var(--ease-out) both;
+  transition: box-shadow var(--duration-fast) var(--ease-out),
+              transform var(--duration-fast) var(--ease-out),
+              border-color var(--duration-fast);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--gray-300);
+}
+
+/* ── Token Row ── */
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.tokens {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tokenWrong {
+  font-family: var(--font-tamil);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--error-600);
+  background: var(--error-50);
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--error-border);
+  text-decoration: line-through;
+  text-decoration-color: var(--error-400);
+  text-decoration-thickness: 1.5px;
+}
+
+.arrow {
+  color: var(--gray-400);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.tokenCorrect {
+  font-family: var(--font-tamil);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--brand-700);
+  background: var(--brand-50);
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--brand-200);
+}
+
+/* ── Type Badge ── */
+.typeBadge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+/* ── Reason Text ── */
+.reason {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--gray-500);
+  font-family: var(--font-tamil);
+  padding-left: 2px;
+  border-left: 2px solid var(--gray-200);
+  padding-left: var(--space-3);
+}
